@@ -1,0 +1,15 @@
+.middle-toast {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  span{
+    font-size: 14px;
+  }
+}
+.toast-success-icon{
+   font-size: 40px;
+}

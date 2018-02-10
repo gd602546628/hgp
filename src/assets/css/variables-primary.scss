@@ -1,0 +1,92 @@
+/*公共的颜色*/
+$ComColors:(
+  white:    white,//白色
+  red:      red,//红色
+  scarlet: #f8311e, // 大红色
+  ponceau:  #FF3C3C,//鲜红色
+  header:   #39383e,//头部的颜色
+  black:    black,//黑色
+  black-2d:  #2d2d2d,//深黑色
+  black-34: #343434,//浅黑色
+  e5:#e5f2fc, //浅蓝色
+  Wathet:   #488aff,//浅蓝色(或者#64b3f8)
+  mazarine: #0164a6,//深蓝色
+  wathet-blue: #066cc1, //浅蓝色
+  nattier-blue: #e5f2fc, // 淡蓝色
+  gray:gray,//灰色
+  gray-8d:#88888d,//深灰色
+  gray-a:#aaaaaa,//浅灰色
+  gray-c:#cccccc,//亮灰色
+  gray-ef:#efefef,//灰白色
+  yellow-f:#ffa902, // 黄色
+);
+
+/*公共的边框线颜色*/
+$ComBorderColor:(
+  c7:#c7c7c7,
+  ef:#efefef,
+  dd:#ddd,
+);
+
+/*公共的字体大小*/
+$ComSize:(
+  size12:12px,
+  size14:14px,
+  size16:16px,
+  size18:18px,
+);
+
+/*公共的高度*/
+$ComHeight:(
+  height14:14px,
+  height20:20px,
+  height30:30px,
+  height40:40px,
+  height44:44px,
+  height49:49px,
+  height50:50px,
+  height60:60px,
+);
+
+
+/*公共的间距（padding，margin）*/
+$ComSpacing:(
+  spac1:  1px,
+  spac2:  2px,
+  spac4:  4px,
+  spac5:  5px,
+  spac6:  6px,
+  spac7:  7px,
+  spac8:  8px,
+  spac10: 10px,
+  spac14: 14px,
+
+  spac0-8:   0px 8px,
+  spac0-10: 0px 10px,
+  spac0-14: 0px 14px,
+
+  spac2-0:  2px 0px,
+  spac8-0:  8px 0px,
+  spac10-0: 10px 0px,
+);
+
+
+/*公共的背景图片样式*/
+@mixin ComBgFn($s:cover,$p1:center,$p1:center) {
+  background-repeat: no-repeat;
+  background-size: $s1;
+  background-position: $p1 $p1;
+}
+
+
+/*超过行数省略号显示*/
+@mixin TextRowFn($n:1,$o:ellipsis) {
+  display: flex;
+  orient: vertical;
+  clamp: $n;
+  overflow: hidden;
+  text-overflow: $o;
+}
+
+
+

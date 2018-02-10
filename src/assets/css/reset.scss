@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  font-family: -apple-system, 'Microsoft YaHei', 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+}
+
+html {
+  height: 100%;
+  font-size: 14px;
+  color: #333;
+  touch-action: manipulation;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+}
+div,p,li,i,span{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#app {
+  top:0px;
+  width: 100%;
+  bottom:50px;
+  &.isApp {
+    bottom: 0px;
+    .download {
+      display: none;
+    }
+  }
+  &:not(.isApp){
+    ._footer{
+        bottom: 50px;
+      }
+    .tab-bar{
+      bottom: 50px;
+    }
+    .page-container ._main{
+      margin-bottom: 50px;
+    }
+    .page-container.hasFooter ._main{
+      margin-bottom: 99px;
+    }
+    .activity-switch-style{
+      bottom: 80px;
+    }
+    .root{
+      margin-bottom: 50px;
+    }
+    .coupon-list-popup{
+      bottom: 49px;
+    }
+  }
+  .download{
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    background: darkgray;
+    width: 100%;
+    height: 50px;
+    z-index: 999;
+  }
+}
+li {
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none !important;
+}
+
+body.stopMove {
+  // position: fixed;
+  // width: 100%;
+}
+
+input, button, select {
+  outline: none;
+  -webkit-appearance: none;
+  background: transparent;
+  /*  user-select: none;*/
+}
+
+button {
+  border: 0px;
+}
+
+html {
+  //mint-scss reset
+  .mint-header {
+    height: 44px;
+    background: map_get($ComColors, header);
+    h1 {
+      font-size: 16px;
+    }
+  }
+
+  .mint-msgbox {
+    width: auto;
+    max-width: 270px;
+    min-width: 200px;
+    border-radius: 5px;
+
+    .mint-msgbox-message {
+      line-height: normal;
+      font-size: 14px;
+      word-wrap: break-word;
+    }
+
+    .mint-msgbox-content {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+  .mint-swipe-indicators {
+    left: 47%;
+    display: flex;
+    width:100%;
+    justify-content: flex-end;
+    .is-active {
+      background: #066cc2!important;
+      opacity: 1;
+    }
+    .mint-swipe-indicator {
+      background: #ffffff;
+      border-radius: 50%;
+      opacity: 0.8;
+      //border: 1px solid #066cc2;
+    }
+  }
+  .mint-indicator:not(.default){
+    .mint-swipe-indicators {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+    }
+    .mint-swipe-indicator {
+      background: white;
+      opacity: 0.8;
+    }
+
+    .mint-swipe-indicator.is-active {
+      background: map_get($ComColors, wathet-blue);
+    }
+    .mint-indicator-wrapper {
+      background-color: transparent;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 99999;
+    }
+    .mint-indicator-mask {
+      z-index: 99999;
+    }
+  }
+/*  .mint-msgbox-confirm {
+    background: map_get($ComColors, wathet-blue);
+    color: white;
+  }
+  .mint-msgbox-cancel {
+    background: map_get($ComColors, yellow-f);
+    color: white;
+  } */
+}
+
+.login-form {
+  .mint-cell-wrapper {
+    background-image: none;
+    font-size: 15px;
+    .mint-cell-title {
+      width: 70px;
+    }
+  }
+  .msg-container {
+    button {
+      margin-left: 10px;
+      padding: 5px 10px;
+      border: 0px;
+      border-radius: 5px;
+      background: map_get($ComColors, wathet-blue);
+      color: white;
+      font-size: 15px;
+      &[disabled] {
+        background: map_get($ComColors, gray-c);;
+      }
+    }
+  }
+}
+
+.highlight {
+  color: #0164a6;
+}
+
+
+

@@ -1,0 +1,196 @@
+.servant-sort {
+  height: 41px;
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  &.onTop {
+    position: fixed;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.servant-sort-wrap {
+  .tab {
+    background: #ffffff;
+    display: flex;
+    padding: 0 10px;
+    border-bottom: 1px solid #efefef;
+    .switch-icon {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: center;
+      -webkit-align-items: center;
+      align-items: center;
+      justify-content: center;
+      margin-left: 10px;
+      margin-right:-10px;
+      padding-right: 10px;
+      .line {
+        width: 1px;
+        height: 20px;
+        margin-right: 10px;
+        background: #efefef;
+        display: block;
+      }
+      i {
+        font-size: 20px;
+        border-left: 1px black;
+        display: block;
+      }
+    }
+    .tab-ul {
+      display: flex;
+      flex: 1;
+      .tab-ul-li {
+        font-size: 13px;
+        height: 40px;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+        color: #343434;
+        transition: all 0.3s ease;
+        &.active {
+          color: #0164a6;
+          .icon {
+            transform: rotateZ(180deg);
+          }
+        }
+        .icon {
+          transition: all 0.3s ease;
+          margin-left: 4px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .content {
+    overflow: scroll;
+    overflow-scrolling: touch;
+    max-height: 400px;
+    .content-wrap {
+      transition: all 0.2s ease;
+      &.draw-enter, &.draw-leave-active {
+        transform: translateY(-100%);
+      }
+      .content-ul {
+        display: flex;
+        background: #ffffff;
+        flex-direction: column;
+        .content-ul-li {
+          display: flex;
+          display: flex;
+          align-items: center;
+          flex: 1;
+          padding-left: 5%;
+          height: 40px;
+          border-bottom: 1px solid #efefef;
+          font-size: 14px;
+          box-sizing: border-box;
+          position: relative;
+          color: #343434;
+          .checkmark {
+            position: absolute;
+            right: 5%;
+            font-size: 14px;
+            top: 14px;
+            color: #0164a6;
+          }
+        }
+      }
+
+      .content-price-li {
+        width: 100%;
+        height: 50px;
+        padding: 5px 10px 0 10px;
+        display: flex;
+        display: -webkit-flex;
+        -webkit-justify-content: center;
+        -webkit-align-items: center;
+        justify-content: center;
+        align-items: center;
+        .price-select-form {
+          width: 78%;
+          margin: 0;
+          display: -webkit-inline-flex;
+          display: inline-flex;
+          -webkit-justify-content: flex-start;
+          -webkit-align-items: center;
+          justify-content: flex-start;
+          align-items: center;
+          .line {
+            background: #d9d9d9;
+            height: 4px;
+            border-radius: 2px;
+            display: inline-block;
+            display: inline-block;
+            width: 4%;
+            margin: 0 1%;
+          }
+          form {
+            .price-select-div {
+              display: flex;
+              display: -webkit-flex;
+              -webkit-justify-content: center;
+              -webkit-align-items:center ;
+              justify-content: center;
+              align-items: center;
+              label {
+                height: 30px;
+                background: #f5f5f9;
+                border-radius: 4px 0 0 4px;
+                line-height: 30px;
+                text-align: center;
+                width: 20%;
+                display: inline-block
+              }
+              input {
+                background: #f5f5f9;
+                border-radius: 0 4px 4px 0;
+                padding: 0;
+                margin: 0;
+                height: 30px;
+                display: inline-block;
+                border: none;
+                width: 76%;
+              }
+            }
+            display: inline-block;
+            width: 42%;
+          }
+        }
+        .price-select-search {
+          width: 18%;
+          margin-left: 2%;
+          display: block;
+          .button {
+            height: 30px;
+            line-height: 30px;
+            border: none;
+            background: #0164a6;
+            color: #ffffff;
+            width: 100%;
+            display: inline-block;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.servant-sort-cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+}
+
+.content-price {
+  background-color: white;
+}
